@@ -1,0 +1,361 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    position: relative;
+    margin-bottom: 10%;
+    font-size: 17px;
+    display: flex;
+    margin-right: 40px;
+    font-weight: light;
+    word-spacing: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p{
+    line-height: 1.6;
+}
+header{
+    font-weight: bold;
+    font-size: 28px;
+    margin: 20px 0 20px 0;
+}
+code{
+    background-color: #f0efef;
+    padding: 20px 20px;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    
+}
+h2{
+    font-weight: lighter;
+}
+img{
+    width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+li{
+    padding: 10px 0;
+    line-height: 1.5;
+    
+}
+ol{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+}
+.list{
+    font-weight: 500;
+}
+.text, .text1{
+    font-weight: lighter;   
+    font-size: 13px;
+    background-color: #f0efef;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-family: 'Lucida Console';
+}
+
+.text1{
+    color: #0069c2;
+    text-decoration-line: underline;
+}
+.paragraph{
+    margin-top: 40px;
+}
+
+
+#navbar{
+    position:sticky;
+    height: 70vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding: 30px 30px 50px 40px;
+    width: auto;
+    background-color: white;
+    flex-shrink: 0;
+    z-index: 0;
+}
+
+
+#navbar .nav-link{
+    text-decoration-line: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-right: 0;
+    color: black;
+    border-left:  2px solid #e5e5e5;
+    transition: all 0.2s ;
+}
+#navbar ul li{
+    padding: 10px 0 10px 0 ;
+}
+#navbar ul{
+    padding: 0;
+}
+#navbar a{
+    padding: 10px;
+}
+a:visited{
+    color: black;
+}
+#navbar a:active{
+    background-color: #f099bd; 
+    font-weight: bolder;
+    border-left: 2px solid red;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.neutral {
+    text-decoration: none; /* Ensure no underline initially */
+    color: black;
+}
+
+.neutral:hover {
+    text-decoration: underline; /* Underline on hover */
+    cursor: pointer;   
+}
+
+.neutral::before {
+    pointer-events: none; /* Prevent interaction with the pseudo-element */
+    content: "#"; /* Content of the pseudo-element */
+    position: relative; 
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    text-decoration: none; /* Ensure no underline */
+    display: inline-block; /* Ensure it is treated as a separate block */
+}
+
+.neutral:hover::before {
+    opacity: 0.5; /* Make visible on hover */
+}
+
+
+
+#navbar .nav-link:hover{
+    color: red;
+}
+
+
+
+main{
+    z-index: 0;
+    margin-bottom: 10%;
+    padding-left: 20px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+#navbar .active{
+    color: red;
+    background-color: #ffc8dd;
+    border-top-right-radius: 5px ;
+    border-bottom-right-radius: 5px;
+    border-left: 4px solid #c1121f;
+}
+
+.bluenote{
+    background-color: #e5f4ff;
+    color: #4e4e4e;
+    padding: 20px 20px 20px 20px;
+}
+.blacklink{
+    color: #000000;
+}
+.bold{
+    font-weight: bold;
+}
+.copycode{
+    overflow: hidden;
+}
+.copycode code{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: auto;
+    
+}
+.copybtn{
+    background-color: whitesmoke;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+   font-size: 12px;
+}
+.codetitle{
+    font-size: 12px;
+    margin-left: 10px;
+    border: none;
+}
+.copyhead{
+    display: flex;
+    background-color: whitesmoke;
+    justify-content: space-between;
+    margin-top: 30px;
+    
+    border-bottom: 1px solid #a6a6a6;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.wrongcode{
+    background-color: #ffe5ec;
+}
+.bottomcode{
+    display: flex;
+    background-color: #ffe5ec;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+.erroricon{
+    padding-right: 10px;
+}
+
+
+pre{
+    margin-top: 0;
+    overflow: auto;
+    width: 100%;
+}
+
+.bluediv{
+    display: flex;
+    position: relative;
+    
+}
+.bluediv p{
+    padding-left: 50px;
+    border-left:2px solid #0085f2;
+    border-radius: 5px;
+    width: 100%;
+}
+.infoicon{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    left: 20px;
+    margin-top: 35px;
+    
+}
+
+#bluelink{
+    color: #0069c2;
+}
+.alttext{
+    display: block;
+    width: auto;
+    height: auto;
+    margin: auto;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+}
+
+.conimage{
+    width: 100%;
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    padding: auto;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    display: block;
+}
+
+.butdiv{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.butlink{
+    border: 1px solid #a6a6a6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+footer{
+    background-color: #f9f9fb;
+    margin-right: -10px;
+}
+
+footer div{
+    position: relative;
+    left: 0;
+    margin-left: -8px;
+    padding-left: 10px;
+    margin-right: -20px;
+    padding-right: 10px;
+    width: 100%;
+    background-color: #f9f9fb;
+    
+}
+
+#bottomdiv{
+    
+    margin-left: 3px;
+    padding-top: 20px;
+}
+
+#bottom1div{
+    padding-bottom: 10px;
+}
+
+#bottom1div p{
+    line-height: 0;
+}
+
+#bottom1div a{
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+.upperbottom{
+    display: flex;
+}
+
+#bottom3div{
+    background-color: #cdcdcd;
+    height: 1px;
+    width: 100%;
+}
+
+@media (max-width: 768px){
+    #navbar{
+        display: none;
+        
+    }
+    #main-doc{
+        margin: 0 auto;
+        width: 100%;
+    }
+    body{
+        font-size: 12px;
+    }
+    .butlink{
+        font-size: 8px;
+    }
+    header{
+        font-size: 20px;
+    }
+    .neutral::before {
+        font-size: 12px;
+    }
+}
